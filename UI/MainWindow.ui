@@ -1,0 +1,1471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Admin</class>
+ <widget class="QMainWindow" name="Admin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1189</width>
+    <height>788</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1189</width>
+    <height>788</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1191</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="MainWindow">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1171</width>
+      <height>731</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <strikeout>false</strikeout>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;hi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Tab đang được chọn (active) */
+QTabBar::tab:selected {
+	min-width: 160px;     /* Độ rộng tối thiểu của mỗi tab */
+    min-height: 35px;
+    background-color: #b96e7f;     /* màu hồng đậm khi chọn */
+    color:#e8ddde ;                 /* chữ trắng khi chọn */
+    font-weight: bold;
+	border-radius: 10px;
+	font: 16pt &quot;MS Shell Dlg 2&quot;;
+   font-weight: bold;
+}
+
+/* Tab chưa được chọn */
+QTabBar::tab:!selected {
+	min-width: 160px;     /* Độ rộng tối thiểu của mỗi tab */
+    min-height: 35px;
+    background-color: #e8ddde;    /* hồng nhạt khi chưa chọn */
+    color: #b96e7f;               /* chữ nâu đỏ */
+    font-weight: normal;
+	border-radius: 10px;
+	font: 16pt &quot;MS Shell Dlg 2&quot;;
+   font-weight: bold;
+}
+
+/* Khi rê chuột vào tab (hover) */
+QTabBar::tab:hover {
+    background-color: #dda0af;    /* hồng sáng hơn khi hover */
+}
+
+/* Viền xung quanh vùng nội dung tab */
+QTabWidget::pane {
+    border: 2px solid #dda0af;
+    border-radius: 10px;
+}
+
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideNone</enum>
+    </property>
+    <widget class="QWidget" name="tabWidgetPageData">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>../images/ic_database.png</normaloff>../images/ic_database.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Database</string>
+     </attribute>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(185, 110, 127);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Tables</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxData">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>20</y>
+        <width>371</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(232, 221, 222);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(185, 110, 127);
+border: 1px solid #faf4ec; 
+border-radius: 10px;
+   font-weight: bold;</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>Holidays_Events</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_holiday_event.png</normaloff>../images/ic_holiday_event.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Items</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_item.png</normaloff>../images/ic_item.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Stores</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_store.png</normaloff>../images/ic_store.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Oil</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_oil.png</normaloff>../images/ic_oil.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Train</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_train.png</normaloff>../images/ic_train.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Test</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_test.png</normaloff>../images/ic_test.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Transaction</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_transaction.png</normaloff>../images/ic_transaction.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Users</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_customer.png</normaloff>../images/ic_customer.png</iconset>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1191</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 192);
+ 
+    padding: 10px;
+ border: 1px solid #faf4ec; 
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>1191</width>
+        <height>641</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(185, 110, 127);
+background-color: rgb(250, 244, 236);
+border: 1px solid #faf4ec; 
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>New Column</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>New Column</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>New Column</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>New Column</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>New Column</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>New Column</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLineEdit" name="lineEditFilter">
+      <property name="geometry">
+       <rect>
+        <x>912</x>
+        <y>20</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::WheelFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(232, 221, 222);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(185, 110, 127);
+border: 1px solid #faf4ec; 
+border-radius: 10px;
+   font-weight: bold;</string>
+      </property>
+     </widget>
+     <zorder>label_2</zorder>
+     <zorder>label_3</zorder>
+     <zorder>comboBoxData</zorder>
+     <zorder>tableWidget</zorder>
+     <zorder>lineEditFilter</zorder>
+    </widget>
+    <widget class="QWidget" name="tabWidgetPageStatistic">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>../images/ic_statistic.png</normaloff>../images/ic_statistic.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Statistic</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBoxChart_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>200</y>
+        <width>881</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(232, 221, 222);
+color: rgb(104, 83, 92);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+      </property>
+      <property name="title">
+       <string>Chart Visualization:</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>861</width>
+         <height>451</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout"/>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>200</y>
+        <width>311</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 192);
+color: rgb(104, 83, 92);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+      </property>
+      <property name="title">
+       <string>Function:</string>
+      </property>
+      <widget class="QPushButton" name="btnPeakLowSales">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> background-color: #b96e7f;     /* màu hồng đậm khi chọn */
+    color:#e8ddde ;                 /* chữ trắng khi chọn */
+    font-weight: bold;
+	border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>Peak–Low Sales</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_peaklow.png</normaloff>../images/ic_peaklow.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnSalesByWeekday">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+    background-color: #e8ddde;    /* hồng nhạt khi chưa chọn */
+    color: #b96e7f;               /* chữ nâu đỏ */
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+	border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>Sales by Weekday</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_saleweek.png</normaloff>../images/ic_saleweek.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnEarthquakeSales">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>160</y>
+         <width>281</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> background-color: #b96e7f;     /* màu hồng đậm khi chọn */
+    color:#e8ddde ;                 /* chữ trắng khi chọn */
+    font-weight: bold;
+	border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>Earthquake Sales Trend</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_trend.png</normaloff>../images/ic_trend.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnHolidayVsNormal">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>230</y>
+         <width>291</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+    background-color: #e8ddde;    /* hồng nhạt khi chưa chọn */
+    color: #b96e7f;               /* chữ nâu đỏ */
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+	border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>Holiday and Normal Sales</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_chartsales.png</normaloff>../images/ic_chartsales.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnCorrelationHeatmap">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>300</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> background-color: #b96e7f;     /* màu hồng đậm khi chọn */
+    color:#e8ddde ;                 /* chữ trắng khi chọn */
+    font-weight: bold;
+	border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>Correlation Heatmap</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_heatmap.png</normaloff>../images/ic_heatmap.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnLagPlot">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>370</y>
+         <width>271</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+    background-color: #e8ddde;    /* hồng nhạt khi chưa chọn */
+    color: #b96e7f;               /* chữ nâu đỏ */
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+	border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>Transactions Lag Plot</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_lagplot.png</normaloff>../images/ic_lagplot.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnYearlySales">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>440</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> background-color: #b96e7f;     /* màu hồng đậm khi chọn */
+    color:#e8ddde ;                 /* chữ trắng khi chọn */
+    font-weight: bold;
+	border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string>Yearly Sales</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../images/ic_yearsale.png</normaloff>../images/ic_yearsale.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1191</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(232, 221, 222);
+color: rgb(104, 83, 92);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+</string>
+      </property>
+      <property name="title">
+       <string>List of data</string>
+      </property>
+      <widget class="QTableWidget" name="tableWidgetListofData">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>1171</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(185, 110, 127);
+background-color: rgb(250, 244, 236);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+</string>
+       </property>
+       <column>
+        <property name="text">
+         <string>New Column</string>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>New Column</string>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabWidgetPagePredict">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>../images/ic_predict.png</normaloff>../images/ic_predict.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Predict</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>1141</width>
+        <height>631</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+/* Tab đang được chọn (active) */
+QTabBar::tab:selected {
+	min-width: 400px;     /* Độ rộng tối thiểu của mỗi tab */
+    min-height: 35px;
+    background-color: #b96e7f;     /* màu hồng đậm khi chọn */
+    color:#e8ddde ;                 /* chữ trắng khi chọn */
+    font-weight: bold;
+	border-radius: 10px;
+	font: 16pt &quot;MS Shell Dlg 2&quot;;
+   font-weight: bold;
+}
+
+/* Tab chưa được chọn */
+QTabBar::tab:!selected {
+	min-width: 400px;     /* Độ rộng tối thiểu của mỗi tab */
+    min-height: 35px;
+    background-color: #e8ddde;    /* hồng nhạt khi chưa chọn */
+    color: #b96e7f;               /* chữ nâu đỏ */
+    font-weight: normal;
+	border-radius: 10px;
+	font: 16pt &quot;MS Shell Dlg 2&quot;;
+   font-weight: bold;
+}
+
+/* Khi rê chuột vào tab (hover) */
+QTabBar::tab:hover {
+    background-color: #dda0af;    /* hồng sáng hơn khi hover */
+}
+
+/* Viền xung quanh vùng nội dung tab */
+QTabWidget::pane {
+    border: 2px solid #dda0af;
+    border-radius: 10px;
+}
+
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="tabProduct">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../images/ic_product.png</normaloff>../images/ic_product.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Predict one product group</string>
+       </attribute>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>30</y>
+          <width>61</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(185, 110, 127);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Date</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>140</y>
+          <width>71</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(185, 110, 127);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Store</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>250</y>
+          <width>91</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(185, 110, 127);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Family</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>370</y>
+          <width>181</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(185, 110, 127);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Onpromotion</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditOnpromotion">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>360</y>
+          <width>621</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::WheelFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 244, 236);
+color: rgb(104, 83, 92);          
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+border-radius: 20px;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnPredictP">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>500</y>
+          <width>181</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> background-color: #b96e7f;   
+    color:#e8ddde ;                 
+	border-radius: 10px;
+font: 15pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Predict</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/ic_buttonpredict.png</normaloff>../images/ic_buttonpredict.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>500</y>
+          <width>151</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(185, 110, 127);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Sales</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditSales">
+        <property name="geometry">
+         <rect>
+          <x>670</x>
+          <y>490</y>
+          <width>381</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::WheelFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 244, 236);
+color: rgb(104, 83, 92);          
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+border-radius: 20px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>30</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../images/ic_date.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>140</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../images/ic_store.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>250</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../images/ic_product.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>370</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../images/ic_onpromotion.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>500</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../images/ic_sale.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEditDateP">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>30</y>
+          <width>621</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 244, 236);
+color: rgb(104, 83, 92);          
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+border-radius: 20px;</string>
+        </property>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::PlusMinus</enum>
+        </property>
+        <property name="dateTime">
+         <datetime>
+          <hour>0</hour>
+          <minute>0</minute>
+          <second>0</second>
+          <year>2013</year>
+          <month>1</month>
+          <day>1</day>
+         </datetime>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+        <property name="currentSectionIndex">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBoxStoreP">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>130</y>
+          <width>621</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 244, 236);
+color: rgb(104, 83, 92);          
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+border-radius: 20px;</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBoxFamily">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>240</y>
+          <width>621</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 244, 236); 
+color: rgb(104, 83, 92);          
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+border-radius: 20px;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tabDate">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../images/ic_day.png</normaloff>../images/ic_day.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Predict by day</string>
+       </attribute>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>30</y>
+          <width>61</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(185, 110, 127);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Date</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEditDateD">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>30</y>
+          <width>611</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 244, 236);  
+color: rgb(104, 83, 92);        
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+border-radius: 20px;</string>
+        </property>
+        <property name="dateTime">
+         <datetime>
+          <hour>0</hour>
+          <minute>0</minute>
+          <second>0</second>
+          <year>2013</year>
+          <month>1</month>
+          <day>1</day>
+         </datetime>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>160</y>
+          <width>71</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(185, 110, 127);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Store</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBoxStoreD">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>160</y>
+          <width>611</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(250, 244, 236); 
+color: rgb(104, 83, 92);          
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+border-radius: 20px;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnPredictD">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>280</y>
+          <width>181</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> background-color: #b96e7f;   
+    color:#e8ddde ;                 
+	border-radius: 10px;
+font: 15pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Predict</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/ic_buttonpredict.png</normaloff>../images/ic_buttonpredict.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidgetDate">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>270</y>
+          <width>621</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(185, 110, 127);
+background-color: rgb(250, 244, 236);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+</string>
+        </property>
+        <column>
+         <property name="text">
+          <string>Family</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Sales</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QLabel" name="label_17">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>30</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../images/ic_date.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>160</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../images/ic_store.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1171</width>
+        <height>691</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(232, 221, 222);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_4</zorder>
+     <zorder>tabWidget</zorder>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1189</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuBack">
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionBack"/>
+   </widget>
+   <addaction name="menuBack"/>
+  </widget>
+  <action name="actionConnect">
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="actionBack">
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/ic_back.png</normaloff>../images/ic_back.png</iconset>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
